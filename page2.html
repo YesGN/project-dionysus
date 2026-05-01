@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recovered Memory</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: "Courier New", monospace;
+            text-align: center;
+            margin-top: 10%;
+        }
+
+        img {
+            width: 300px;
+            opacity: 0.85;
+            margin-bottom: 20px;
+            filter: grayscale(100%);
+        }
+
+        input {
+            background: black;
+            border: 1px solid white;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        button {
+            background: transparent;
+            border: 1px solid white;
+            color: white;
+            padding: 8px 15px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        #hint {
+            margin-top: 15px;
+            font-size: 14px;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+<img src="your-image.jpg">
+
+<h2>File corrupted...</h2>
+<p>Only one phrase remains.</p>
+
+<input type="password" id="pass2" placeholder="Album Name">
+<br>
+<button onclick="check2()">DECRYPT</button>
+
+<div id="hint">"Not a toy... a challenge."</div>
+
+<script>
+function check2() {
+    let input = document.getElementById("pass2").value;
+
+    if (input === "The Game") {
+        document.body.innerHTML = "<h1 style='color: yellow;'>Welcome Back, Arther</h1>";
+
+        setTimeout(() => {
+            window.location.href = "https://drive.google.com";
+        }, 2000);
+    } else {
+        alert("Decryption Failed.");
+    }
+}
+</script>
+
+</body>
+</html>
